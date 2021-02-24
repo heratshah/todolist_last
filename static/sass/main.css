@@ -5,12 +5,8 @@
   padding: 0%;
 }
 
-.taskform__bgimage {
-  background-image: url(/img/nav3.jpg);
-}
-
-.todo {
-  margin: 1% 25% 0% 25%;
+.form__bgimage {
+  background-image: url(/img/nav2.jpg);
 }
 
 .todo__check-checkall {

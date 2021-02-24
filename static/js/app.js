@@ -7,7 +7,7 @@ var todo__filtercheckall = document.querySelector('.todo__filter-checkall');
 var inputcheckbox = document.getElementById('input-checkbox');
 
 //class define
-class item {
+class Item {
     createDiv(itemname) {
         let input = document.createElement('input');
         input.value = itemname;
@@ -314,7 +314,7 @@ function check(event) {
         alert("Please enter your name ...");
     } else {
         event.preventDefault();
-        new item().createDiv(taskform__input.value);
+        new Item().createDiv(taskform__input.value);
         alert("Add done ...");
         task__input.value = "";
     }
