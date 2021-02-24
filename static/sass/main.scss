@@ -1,0 +1,145 @@
+@import "mixin";
+@import "var";
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.taskform {
+    margin: 5% 20% 5% 20%;
+    &__bgimage {
+        //background-color: #1b405a;
+        background-image: url(/img/nav3.jpg);
+        padding: 5% 5% 5% 5%;
+    }
+    &__input {
+        width: 100%;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 0.5rem;
+        @include first;
+        &:focus {
+            opacity: 0.6;
+        }
+    }
+    &__add-btn {
+        width: 100%;
+        margin-top: 1%;
+        padding: 0.5rem;
+        background: transparent;
+        opacity: 0.6;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        @include first;
+        background-color: royalblue;
+        color: white;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    &__filter {
+        margin-top: 2%;
+        background: transparent;
+        background-color: white;
+        opacity: 0.6;
+        color: $bg-color;
+        width: 100%;
+        height: 2rem;
+        @include first;
+        &:hover {
+            color: $bg-color;
+            opacity: 0.5;
+        }
+    }
+}
+
+.todo {
+    margin: 1% 25% 0% 25%;
+    &__check-checkall {
+        width: 5%;
+        height: 20px;
+    }
+    &__filter-checkall {
+        width: 93%;
+        height: 2rem;
+        background-color: rgb(247, 247, 247);
+        color: $bg-color;
+        @include first;
+    }
+    &__all-list {
+        margin-top: 1%;
+    }
+    &__single-list {
+        margin-top: 2vh;
+        transition: all 1s ease;
+        display: flex;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        &:hover {
+            input {
+                background-color: royalblue;
+                opacity: 0.6;
+                color: white;
+                @include first;
+            }
+        }
+    }
+    &__checkbox {
+        width: 5%;
+        height: 20px;
+        @include first;
+    }
+    &__input {
+        margin-left: 5%;
+        width: 60%;
+        background-color: rgb(247, 247, 247);
+        text-align: center;
+        color: $bg-color;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        @include first;
+    }
+    &__edit-btn {
+        margin-left: 2%;
+        width: 5%;
+        @include first;
+        background-color: white;
+        color: blue;
+        &:hover {
+            background-color: blue;
+            color: white;
+        }
+    }
+    &__delete-btn {
+        margin-left: 2%;
+        width: 5%;
+        @include first;
+        color: red;
+        background-color: white;
+        &:hover {
+            color: white;
+            background-color: red;
+        }
+    }
+    &__complate-btn {
+        margin-left: 11%;
+        width: 5%;
+        @include first;
+        background-color: white;
+        color: green;
+        &:hover {
+            background-color: green;
+            color: white;
+        }
+    }
+    &--complated {
+        text-decoration: line-through;
+        color: red;
+        input {
+            background-color: lightgray;
+            color: white;
+        }
+    }
+    &--fall {
+        transform: translate(10rem) rotateY(20deg);
+        opacity: 0%;
+    }
+}

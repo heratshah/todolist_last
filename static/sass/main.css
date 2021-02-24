@@ -1,0 +1,259 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.taskform {
+  margin: 5% 20% 5% 20%;
+}
+
+.taskform__bgimage {
+  background-image: url(/img/nav3.jpg);
+  padding: 5% 5% 5% 5%;
+}
+
+.taskform__input {
+  width: 100%;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0.5rem;
+  border: none;
+  font-size: auto;
+  border-radius: 5rem;
+  outline: none;
+}
+
+.taskform__input:focus {
+  border: none;
+  outline: none;
+  opacity: 0.7;
+}
+
+.taskform__input:focus {
+  opacity: 0.6;
+}
+
+.taskform__add-btn {
+  width: 100%;
+  margin-top: 1%;
+  padding: 0.5rem;
+  background: transparent;
+  opacity: 0.6;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: none;
+  font-size: auto;
+  border-radius: 5rem;
+  outline: none;
+  background-color: royalblue;
+  color: white;
+}
+
+.taskform__add-btn:focus {
+  border: none;
+  outline: none;
+  opacity: 0.7;
+}
+
+.taskform__add-btn:hover {
+  opacity: 0.8;
+}
+
+.taskform__filter {
+  margin-top: 2%;
+  background: transparent;
+  background-color: white;
+  opacity: 0.6;
+  color: #343a40;
+  width: 100%;
+  height: 2rem;
+  border: none;
+  font-size: auto;
+  border-radius: 5rem;
+  outline: none;
+}
+
+.taskform__filter:focus {
+  border: none;
+  outline: none;
+  opacity: 0.7;
+}
+
+.taskform__filter:hover {
+  color: #343a40;
+  opacity: 0.5;
+}
+
+.todo {
+  margin: 1% 25% 0% 25%;
+}
+
+.todo__check-checkall {
+  width: 5%;
+  height: 20px;
+}
+
+.todo__filter-checkall {
+  width: 93%;
+  height: 2rem;
+  background-color: #f7f7f7;
+  color: #343a40;
+  border: none;
+  font-size: auto;
+  border-radius: 5rem;
+  outline: none;
+}
+
+.todo__filter-checkall:focus {
+  border: none;
+  outline: none;
+  opacity: 0.7;
+}
+
+.todo__all-list {
+  margin-top: 1%;
+}
+
+.todo__single-list {
+  margin-top: 2vh;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.todo__single-list:hover input {
+  background-color: royalblue;
+  opacity: 0.6;
+  color: white;
+  border: none;
+  font-size: auto;
+  border-radius: 5rem;
+  outline: none;
+}
+
+.todo__single-list:hover input:focus {
+  border: none;
+  outline: none;
+  opacity: 0.7;
+}
+
+.todo__checkbox {
+  width: 5%;
+  height: 20px;
+  border: none;
+  font-size: auto;
+  border-radius: 5rem;
+  outline: none;
+}
+
+.todo__checkbox:focus {
+  border: none;
+  outline: none;
+  opacity: 0.7;
+}
+
+.todo__input {
+  margin-left: 5%;
+  width: 60%;
+  background-color: #f7f7f7;
+  text-align: center;
+  color: #343a40;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
+  font-size: auto;
+  border-radius: 5rem;
+  outline: none;
+}
+
+.todo__input:focus {
+  border: none;
+  outline: none;
+  opacity: 0.7;
+}
+
+.todo__edit-btn {
+  margin-left: 2%;
+  width: 5%;
+  border: none;
+  font-size: auto;
+  border-radius: 5rem;
+  outline: none;
+  background-color: white;
+  color: blue;
+}
+
+.todo__edit-btn:focus {
+  border: none;
+  outline: none;
+  opacity: 0.7;
+}
+
+.todo__edit-btn:hover {
+  background-color: blue;
+  color: white;
+}
+
+.todo__delete-btn {
+  margin-left: 2%;
+  width: 5%;
+  border: none;
+  font-size: auto;
+  border-radius: 5rem;
+  outline: none;
+  color: red;
+  background-color: white;
+}
+
+.todo__delete-btn:focus {
+  border: none;
+  outline: none;
+  opacity: 0.7;
+}
+
+.todo__delete-btn:hover {
+  color: white;
+  background-color: red;
+}
+
+.todo__complate-btn {
+  margin-left: 11%;
+  width: 5%;
+  border: none;
+  font-size: auto;
+  border-radius: 5rem;
+  outline: none;
+  background-color: white;
+  color: green;
+}
+
+.todo__complate-btn:focus {
+  border: none;
+  outline: none;
+  opacity: 0.7;
+}
+
+.todo__complate-btn:hover {
+  background-color: green;
+  color: white;
+}
+
+.todo--complated {
+  text-decoration: line-through;
+  color: red;
+}
+
+.todo--complated input {
+  background-color: lightgray;
+  color: white;
+}
+
+.todo--fall {
+  -webkit-transform: translate(10rem) rotateY(20deg);
+          transform: translate(10rem) rotateY(20deg);
+  opacity: 0%;
+}
+/*# sourceMappingURL=main.css.map */
