@@ -1,6 +1,6 @@
-var taskform__add = document.getElementById('insert');
-var taskform__input = document.getElementById('inputbox');
-var taskform__filter = document.getElementById('filter');
+var insert = document.getElementById('insert');
+var inputbox = document.getElementById('inputbox');
+var filter = document.getElementById('filter');
 
 var todo__alllist = document.querySelector('.todo__all-list');
 var todo__filtercheckall = document.querySelector('.todo__filter-checkall');
@@ -144,7 +144,7 @@ class Item {
             comButton.addEventListener('click', () => this.complate(comButton));
             editButton.addEventListener('click', () => this.edit(editButton));
             deleteButton.addEventListener('click', () => this.remove(deleteButton));
-            taskform__filter.addEventListener('change', () => this.filtertodo(event));
+            filter.addEventListener('change', () => this.filtertodo(event));
             checkboxButton.addEventListener('click', () => this.checkselectAll(todo__alllist));
             todo__filtercheckall.addEventListener('change', () => this.checked(todo__filtercheckall));
             inputcheckbox.addEventListener('click', () => this.SelectAll(inputcheckbox));
@@ -309,15 +309,15 @@ document.addEventListener("DOMContentLoaded", new item().showlocaltodo());
 
 //function 
 function check(event) {
-    if (taskform__input.value === "") {
+    if (inputbox.value === "") {
         event.preventDefault();
         alert("Please enter your name ...");
     } else {
         event.preventDefault();
-        new Item().createDiv(taskform__input.value);
+        new Item().createDiv(inputbox.value);
         alert("Add done ...");
         task__input.value = "";
     }
 }
 //call function
-taskform__add.addEventListener('click', check);
+insert.addEventListener('click', check);
