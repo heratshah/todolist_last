@@ -2,54 +2,13 @@
 @import "var";
 * {
     margin: 0%;
-    padding: 0%;
     box-sizing: border-box;
+    padding: 0%;
 }
 
 .taskform {
-    margin: 5% 20% 5% 20%;
     &__bgimage {
-        //background-color: #1b405a;
         background-image: url(/img/nav3.jpg);
-        padding: 5% 5% 5% 5%;
-    }
-    &__input {
-        width: 100%;
-        text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        padding: 0.5rem;
-        @include first;
-        &:focus {
-            opacity: 0.6;
-        }
-    }
-    &__add-btn {
-        width: 100%;
-        margin-top: 1%;
-        padding: 0.5rem;
-        background: transparent;
-        opacity: 0.6;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        @include first;
-        background-color: royalblue;
-        color: white;
-        &:hover {
-            opacity: 0.8;
-        }
-    }
-    &__filter {
-        margin-top: 2%;
-        background: transparent;
-        background-color: white;
-        opacity: 0.6;
-        color: $bg-color;
-        width: 100%;
-        height: 2rem;
-        @include first;
-        &:hover {
-            color: $bg-color;
-            opacity: 0.5;
-        }
     }
 }
 
@@ -60,47 +19,47 @@
         height: 20px;
     }
     &__filter-checkall {
+        @include first;
         width: 93%;
         height: 2rem;
         background-color: rgb(247, 247, 247);
         color: $bg-color;
-        @include first;
     }
     &__all-list {
         margin-top: 1%;
     }
     &__single-list {
-        margin-top: 2vh;
         transition: all 1s ease;
         display: flex;
+        margin-top: 2vh;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         &:hover {
             input {
-                background-color: royalblue;
-                opacity: 0.6;
-                color: white;
                 @include first;
+                opacity: 0.6;
+                background-color: royalblue;
+                color: white;
             }
         }
     }
     &__checkbox {
+        @include first;
         width: 5%;
         height: 20px;
-        @include first;
     }
     &__input {
+        @include first;
         margin-left: 5%;
         width: 60%;
         background-color: rgb(247, 247, 247);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         text-align: center;
         color: $bg-color;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        @include first;
     }
     &__edit-btn {
+        @include first;
         margin-left: 2%;
         width: 5%;
-        @include first;
         background-color: white;
         color: blue;
         &:hover {
@@ -109,20 +68,20 @@
         }
     }
     &__delete-btn {
+        @include first;
         margin-left: 2%;
         width: 5%;
-        @include first;
-        color: red;
         background-color: white;
+        color: red;
         &:hover {
-            color: white;
             background-color: red;
+            color: white;
         }
     }
     &__complate-btn {
+        @include first;
         margin-left: 11%;
         width: 5%;
-        @include first;
         background-color: white;
         color: green;
         &:hover {
@@ -139,7 +98,7 @@
         }
     }
     &--fall {
-        transform: translate(10rem) rotateY(20deg);
         opacity: 0%;
+        transform: translate(10rem) rotateY(20deg);
     }
 }

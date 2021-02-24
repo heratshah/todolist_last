@@ -1,6 +1,6 @@
-var taskform__add = document.querySelector('.taskform__add-btn');
-var taskform__input = document.querySelector('.taskform__input');
-var taskform__filter = document.querySelector('.taskform__filter');
+var taskform__add = document.getElementById('insert');
+var taskform__input = document.getElementById('inputbox');
+var taskform__filter = document.getElementById('filter');
 
 var todo__alllist = document.querySelector('.todo__all-list');
 var todo__filtercheckall = document.querySelector('.todo__filter-checkall');

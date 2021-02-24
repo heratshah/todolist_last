@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- SCSS -->
-    <link rel="stylesheet" href="static/sass/main.css">
+    <link rel="stylesheet" href="sass/main.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -20,22 +20,34 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand mx-auto" href="#">TODO LIST</a>
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span> -->
-        </button>
-
-        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-        </div> -->
+    <nav class="navbar navbar-expand-lg navbar-dark justify-content-center bg-info">
+        <a class="navbar-brand" href="#">TODO LIST</a>
     </nav>
 
-    <div class="taskform">
+    <div class="container taskform__bgimage">
+        <form class="mx-5 my-5">
+            <div class="row">
+                <div class="form-group col-md-12 mt-5">
+                    <input id="inputbox" class="form-control form-contro-lg" type="text" placeholder="Name" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <button id="insert" class="form-control form-control-sm btn btn-success"><i class="fa fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12 mb-5">
+                    <select name="todos" class="form-control form-control-sm" id="filter">
+                        <option value="all">All</option>
+                        <option value="complated">Complated</option>
+                        <option value="uncomplated">Uncomplated</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- <div class="taskform">
         <div class="taskform__bgimage">
             <form>
                 <input id="inputbox" class="taskform__input" type="text" placeholder="Name" />
@@ -47,25 +59,24 @@
               </select>
             </form>
         </div>
-    </div>
-
-    <div class="todo">
-        <div class="todo__select-checkall">
-            <input type="checkbox" class="todo__check-checkall" id="input-checkbox" value="Select All" />
-            <select name="todos" class="todo__filter-checkall">
-              <option value="">Select-One</option>
-              <option value="delete">Delete</option>
-              <option value="completed">Completed</option>
-              <option value="uncomplated">Uncomplated</option>
-            </select>
+    </div> -->
+    <div class="container">
+        <div class="todo">
+            <div class="todo__select-checkall">
+                <input type="checkbox" class="todo__check-checkall" id="input-checkbox" value="Select All" />
+                <select name="todos" class="todo__filter-checkall">
+                    <option value="">Select-One</option>
+                    <option value="delete">Delete</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncomplated">Uncomplated</option>
+                </select>
+            </div>
+            <ul class="todo__all-list"></ul>
         </div>
-        <ul class="todo__all-list"></ul>
     </div>
-
-    <h2>Hello</h2>
 
 </body>
 
-<script src="static/js/app.js"></script>
+<script src="app.js"></script>
 
 </html>
