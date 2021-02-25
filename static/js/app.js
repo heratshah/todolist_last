@@ -6,14 +6,14 @@ var todo__alllist = document.querySelector('.todo__all-list');
 var todo__filtercheckall = document.querySelector('.todo__filter-checkall');
 var inputcheckbox = document.getElementById('input-checkbox');
 
-function createDiv(itemname) {
+function addList(itemname) {
     let input = document.createElement('input');
     input.value = itemname;
     input.disabled = true;
     input.classList.add('todo__input');
     input.type = 'text';
 
-    savelocaltodo(itemname);
+    saveLocalTodo(itemname);
 
     let itemBox = document.createElement('div');
     itemBox.classList.add('todo__single-list');
@@ -45,21 +45,21 @@ function createDiv(itemname) {
     location.reload();
 }
 
-function edit(item) {
+function editList(item) {
     if (item.classList[0] === "todo__edit-btn") {
         const itemBox = item.parentElement;
-        editlocaltodo(itemBox);
+        editLocalTodo(itemBox);
         location.reload();
 
     }
 }
 
-function remove(item) {
+function removeList(item) {
     console.log(item.classList[0]);
     if (item.classList[0] === "todo__delete-btn") {
         const itemBox = item.parentElement;
         itemBox.classList.add('todo--fall');
-        removelocaltodo(itemBox);
+        removeLocalTodo(itemBox);
         itemBox.addEventListener('transitionend', () => {
             itemBox.remove();
         });
@@ -67,7 +67,7 @@ function remove(item) {
 
 }
 
-function complate(item) {
+function complateList(item) {
     if (item.classList[0] === "todo__complate-btn") {
         const itemBox = item.parentElement;
         itemBox.classList.toggle('todo--complated');
@@ -77,7 +77,7 @@ function complate(item) {
 
 
 //Add data LocalStorage
-function savelocaltodo(input) {
+function saveLocalTodo(input) {
     let todos;
     if (localStorage.getItem('todos') === null) {
         todos = [];
@@ -91,7 +91,7 @@ function savelocaltodo(input) {
 }
 
 //Show all data LocalStorage
-function showlocaltodo() {
+function showLocalTodo() {
 
     let todos;
     if (localStorage.getItem('todos') === null) {
@@ -137,19 +137,19 @@ function showlocaltodo() {
 
         todo__alllist.appendChild(itemBox);
 
-        comButton.addEventListener('click', () => complate(comButton));
-        editButton.addEventListener('click', () => edit(editButton));
-        deleteButton.addEventListener('click', () => remove(deleteButton));
-        filter.addEventListener('change', () => filtertodo(event));
-        checkboxButton.addEventListener('click', () => checkselectAll(todo__alllist));
+        comButton.addEventListener('click', () => complateList(comButton));
+        editButton.addEventListener('click', () => editList(editButton));
+        deleteButton.addEventListener('click', () => removeList(deleteButton));
+        filter.addEventListener('change', () => filterTodo(event));
+        checkboxButton.addEventListener('click', () => checkSelectAll(todo__alllist));
         todo__filtercheckall.addEventListener('change', () => checked(todo__filtercheckall));
-        inputcheckbox.addEventListener('click', () => SelectAll(inputcheckbox));
+        inputcheckbox.addEventListener('click', () => selectAll(inputcheckbox));
     }
 
 }
 
 //Remove data LocalStorage
-function removelocaltodo(todo) {
+function removeLocalTodo(todo) {
 
     let todos;
     if (localStorage.getItem('todos') === null) {
@@ -165,7 +165,7 @@ function removelocaltodo(todo) {
 }
 
 //Edit data LocalStorage
-function editlocaltodo(todo) {
+function editLocalTodo(todo) {
 
     let todos;
     if (localStorage.getItem('todos') === null) {
@@ -186,7 +186,7 @@ function editlocaltodo(todo) {
 }
 
 //Filter data complate and uncomplate
-function filtertodo(e) {
+function filterTodo(e) {
     const todos = todo__alllist.childNodes;
     todos.forEach(function(todo) {
         switch (e.target.value) {
@@ -263,7 +263,7 @@ function checked(item) {
 }
 
 //Select all checkbox
-function SelectAll(item) {
+function selectAll(item) {
 
     let selectbox = todo__alllist.childNodes;
     if (selectbox.length === 0) {
@@ -285,7 +285,7 @@ function SelectAll(item) {
 }
 
 //check all check box select 
-function checkselectAll(item) {
+function checkSelectAll(item) {
     let selectbox = item.childNodes;
     let count = 0;
     selectbox.forEach(item => {
@@ -301,17 +301,17 @@ function checkselectAll(item) {
 }
 
 //function 
-function Check(event) {
+function check(event) {
     if (inputbox.value === "") {
         event.preventDefault();
         alert("Please enter your name ...");
     } else {
         event.preventDefault();
-        createDiv(inputbox.value);
+        addList(inputbox.value);
         alert("Add done ...");
         task__input.value = "";
     }
 }
 //call function
-insert.addEventListener('click', Check);
-document.addEventListener("DOMContentLoaded", showlocaltodo);
+insert.addEventListener('click', check);
+document.addEventListener("DOMContentLoaded", showLocalTodo);
