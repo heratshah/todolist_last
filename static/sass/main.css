@@ -9,6 +9,10 @@
   background-image: url(/img/nav2.jpg);
 }
 
+.todo {
+  margin: 1% 10% 0% 10%;
+}
+
 .todo__check-checkall {
   width: 5%;
   height: 20px;
