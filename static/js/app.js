@@ -6,6 +6,7 @@ var todo__alllist = document.querySelector('.todo__all-list');
 var todo__filtercheckall = document.querySelector('.todo__filter-checkall');
 var inputcheckbox = document.getElementById('input-checkbox');
 
+//Add List Funtion
 function addList(itemname) {
     let input = document.createElement('input');
     input.value = itemname;
@@ -45,6 +46,7 @@ function addList(itemname) {
     location.reload();
 }
 
+//Edit List Funtion
 function editList(item) {
     if (item.classList[0] === "todo__edit-btn") {
         const itemBox = item.parentElement;
@@ -54,6 +56,7 @@ function editList(item) {
     }
 }
 
+//Remove List Funtion
 function removeList(item) {
     console.log(item.classList[0]);
     if (item.classList[0] === "todo__delete-btn") {
@@ -67,6 +70,7 @@ function removeList(item) {
 
 }
 
+//Complate List Funtion
 function complateList(item) {
     if (item.classList[0] === "todo__complate-btn") {
         const itemBox = item.parentElement;
