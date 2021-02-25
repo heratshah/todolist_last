@@ -308,7 +308,7 @@ class Item {
 document.addEventListener("DOMContentLoaded", new item().showlocaltodo());
 
 //function 
-function check(event) {
+function Check(event) {
     if (inputbox.value === "") {
         event.preventDefault();
         alert("Please enter your name ...");
@@ -320,4 +320,4 @@ function check(event) {
     }
 }
 //call function
-insert.addEventListener('click', check);
+insert.addEventListener('click', Check);
